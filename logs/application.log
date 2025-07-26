@@ -1,0 +1,31 @@
+2025-07-08 22:22:42.439 [main] INFO  c.a.b.BlogGatewayApplication - Starting BlogGatewayApplication using Java 21.0.7 with PID 39656 (C:\File\CS\Java\Blog-gateway\target\classes started by 李超 in C:\File\CS\Java\Blog-gateway)
+2025-07-08 22:22:42.440 [main] INFO  c.a.b.BlogGatewayApplication - The following 1 profile is active: "route"
+2025-07-08 22:22:43.006 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=179cd57e-4e0b-3032-a00e-561cc367472b
+2025-07-08 22:22:43.545 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-07-08 22:22:43.545 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-07-08 22:22:43.546 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-07-08 22:22:43.692 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-08 22:22:43.847 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 57080 (http)
+2025-07-08 22:22:44.394 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP gateway 172.22.64.1:57080 register finished
+2025-07-08 22:22:44.441 [main] INFO  c.a.b.BlogGatewayApplication - Started BlogGatewayApplication in 2.512 seconds (process running for 3.178)
+2025-07-08 22:25:08.409 [Thread-17] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-08 22:25:08.409 [Thread-2] WARN  c.a.n.c.executor.ThreadPoolManager - [ThreadPoolManager] Start destroying ThreadPool
+2025-07-08 22:25:08.409 [Thread-19] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-08 22:25:08.409 [Thread-17] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-08 22:25:08.409 [Thread-2] WARN  c.a.n.c.executor.ThreadPoolManager - [ThreadPoolManager] Destruction of the end
+2025-07-08 22:25:08.411 [Thread-19] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-08 22:25:08.412 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-08 22:25:08.413 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-08 22:25:10.469 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-08 22:25:10.474 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.

@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    gateway:
+        routes:
+          - id: account-route
+            uri: lb://account-service
+            predicates:
+              - Path=/api/account/**
+            filters:
+              - RewritePath=/api/account/(?<segment>.*), /$\{segment}
+          - id: ai-route
+            uri: lb://ai-service
+            predicates:
+                - Path=/api/ai/**
+            filters:
+              - RewritePath=/api/ai/(?<segment>.*), /$\{segment}
+          - id: resource-route
+            uri: lb://resource-service
+            predicates:
+                - Path=/api/resource/**
+            filters:
+              - RewritePath=/api/resource/(?<segment>.*), /$\{segment}
+          - id: blog-service
+            uri: lb://blog-service
+            predicates:
+                - Path=/api/blog/**
+            filters:
+              - RewritePath=/api/blog/(?<segment>.*), /$\{segment}
+        default-filters:
+          - AddResponseHeader=X-Response-Default, Default
+          - RewritePath=/api/(?<segment>.*), /$\{segment}

@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    include: route
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:13848
+
+#logging:
+#  level:
+#    com.alibaba.nacos: OFF
+#    org.springframework.cloud.gateway: OFF
+
+server:
+  port: 57070
+
