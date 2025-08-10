@@ -16,3 +16,30 @@ spring:
 server:
   port: 57070
 
+logging:
+  level:
+    # 启用 Spring Cloud Gateway 核心日志，这将显示路由匹配和过滤器链执行的详细信息
+    org.springframework.cloud.gateway: DEBUG
+
+    # 启用 Spring WebFlux 的相关日志，WebFlux 是 Gateway 的底层框架
+    # 这会显示请求如何被DispatchHandler处理，以及HTTP消息的编解码等
+    org.springframework.web.reactive: DEBUG
+
+    # Reactor Netty 的日志，Gateway 使用 Netty 作为底层 HTTP 服务器
+    # DEBUG 级别可以看到更底层的网络事件和请求/响应的流量信息
+    reactor.netty: DEBUG
+
+    # Spring 框架核心日志，通常 INFO 级别就够，但如果需要深入调试Spring组件，可以设为DEBUG
+    org.springframework: INFO
+
+    # 如果你使用了 LoadBalancer（如Nacos或Eureka），启用相关日志
+    org.springframework.cloud.client.loadbalancer: DEBUG
+    reactor.netty.internal: DEBUG # 更多底层网络日志，可能非常冗长
+    reactor.core.publisher: DEBUG # Reactor 响应式编程的日志，也可能很详细
+
+  # 如果你希望将这些详细日志输出到文件
+  file:
+    name: logs/gateway_debug.log # 建议为调试日志使用单独的文件
+    max-size: 50MB # 调试日志可能会非常大，增加文件大小限制
+    max-history: 5 # 保留最近5天的日志文件
+

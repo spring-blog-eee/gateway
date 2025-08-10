@@ -8,24 +8,39 @@ spring:
               - Path=/api/account/**
             filters:
               - RewritePath=/api/account/(?<segment>.*), /$\{segment}
+              - name: RouteBasedAuthFilter
+                args:
+                  requiredAuth: true
+
           - id: ai-route
             uri: lb://ai-service
             predicates:
-                - Path=/api/ai/**
+                - Path=/api/llm/**
             filters:
-              - RewritePath=/api/ai/(?<segment>.*), /$\{segment}
+              - RewritePath=/api/llm/(?<segment>.*), /$\{segment}
+              - name: RouteBasedAuthFilter
+                args:
+                  requiredAuth: true
+
           - id: resource-route
             uri: lb://resource-service
             predicates:
-                - Path=/api/resource/**
+                - Path=/api/resources/**
             filters:
-              - RewritePath=/api/resource/(?<segment>.*), /$\{segment}
+              - RewritePath=/api/resources/(?<segment>.*), /$\{segment}
+              - name: RouteBasedAuthFilter
+                args:
+                  requiredAuth: true
+
           - id: blog-service
             uri: lb://blog-service
             predicates:
-                - Path=/api/blog/**
+                - Path=/api/blogs/**
             filters:
-              - RewritePath=/api/blog/(?<segment>.*), /$\{segment}
+              - RewritePath=/api/blogs/(?<segment>.*), /$\{segment}
+              - name: RouteBasedAuthFilter
+                args:
+                  requiredAuth: true
         default-filters:
           - AddResponseHeader=X-Response-Default, Default
           - RewritePath=/api/(?<segment>.*), /$\{segment}
