@@ -82,6 +82,10 @@ public class RouteBasedAuthFilter extends AbstractGatewayFilterFactory<RouteBase
 
     public static class Config
     {
+        // 判断用户角色，默认为所有角色都可以访问
+        // 根据不同的角色，在getUserAuthorityFromToken()方法中进行不同的判断
+//        private List<String> roles;
+
         private boolean requiredAuth = true;
 
         public boolean isRequiredAuth() {
